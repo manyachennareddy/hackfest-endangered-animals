@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Save Our Species</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>🐾 Save Our Species</h1>
+			<p>Filter animals by endangerment level and donate to protect them</p>
+		</header>
+		<div class="controls">
+			<label for="filter">Filter by Endangerment:</label>
+			<select id="filter" onchange="filterSpecies(this)">
+				<option value="all">All</option>
+				<option value="Extinct in the Wild">Extinct in the Wild</option>
+				<option value="Critically Endangered">Critically Endangered</option>
+				<option value="Endangered">Endangered</option>
+				<option value="Vulnerable">Vulnerable</option>
+			</select>
+		</div>
+		<main class="species-container" id="speciesContainer">
+    <div class="card" data-status="Vulnerable">
+        <div class="cardContainer">
+            <img src="img/panda.jpg" alt="Giant Panda" />
+            <h3>Giant Panda</h3>
+            <p class="status vulnerable">Vulnerable</p>
+            <ul></ul>
+            <p>Pandas nearly became extinct due to habitat loss, low reproductive rates, dietary specialization, and human activities. However, the Chinese Government helped in multiple ways including creating policies to protect their haitat and reduce poaching. Due to this, they are now vulnerable instead of endangered.</p>
+        </div>
+        <a href="https://www.worldwildlife.org/species/giant-panda" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+
+    <div class="card" data-status="Critically Endangered">
+        <div class="cardContainer">
+            <img src="img/sea_turtle.jpg" alt="Hawksbill Turtle" />
+            <h3>Hawksbill Turtles</h3>
+            <p class="status critically">Critically Endangered</p>
+            <p>Hawksbill turtles are highly valued for their shells. Illegal poaching and trade threaten their population. Climate change decreases hatchling survival rates and they get caught in pollution. They are also losing their habitat hue to the destruction of coral reefs. </p>
+        </div>
+        <a href="https://www.seeturtles.org" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+
+    <div class="card" data-status="Critically Endangered">
+        <div class="cardContainer">
+            <img src="img/axolotl.jpg" alt="Axolotls" />
+            <h3>Axolotl</h3>
+            <p class="status critically">Critically Endangered</p>
+            <p>Axolotls are endangered due to pollution, habitat loss, invasive species, climate change, and overexploitation. Urban expansion has reduced water bodies leaving only canals and wetlands, increasing inbreeding and reducing genetic diversity. This causes axoltols to be highly vulnerable to environmental changes. </p>
+        </div>
+        <a href="https://www.worldwildlife.org/species/axolotl" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+			
+	<div class="card" data-status="Critically Endangered">
+    	<div class="cardContainer">
+        <img src="img/saola.jpg" alt="Saola" />
+        <h3>Saola</h3>
+        <p class="status critically">Critically Endangered</p>
+        <p>The Saola, often called the “Asian Unicorn,” is extremely rare and lives in the Annamite Mountains of Laos and Vietnam. Habitat loss, hunting, and snares have pushed it to the brink of extinction. Very little is known about its behavior due to its elusive nature.</p>
+    </div>
+    <a href="https://www.worldwildlife.org/donate" target="_blank">
+        <button class="donate-btn">Donate to Protect</button>
+    </a>
+</div>	
+
+    <div class="card" data-status="Endangered">
+        <div class="cardContainer">
+            <img src="img/penguin.jpg" alt="Galápagos penguins">
+            <h3>Galápagos Penguins</h3>
+            <p class="status endangered">Endangered</p>
+            <p>Galápagos Penguins are endangered due to pollution and climate change.</p>
+        </div>
+        <a href="https://www.galapagos.org" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+
+    <div class="card" data-status="Endangered">
+        <div class="cardContainer">
+            <img src="img/red_panda.jpg" alt="Red Panda">
+            <h3>Red Pandas</h3>
+            <p class="status endangered">Endangered</p>
+            <p>Red Pandas are threatened by poaching and habitat loss. Due to this, the number of Red Pandas remaining in the wild has been reduce by 40% in the past 20 years. </p>
+        </div>
+        <a href="https://redpandanetwork.org" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+
+    <div class="card" data-status="Endangered">
+        <div class="cardContainer">
+            <img src="img/elephant.jpg" alt="Elephant">
+            <h3>African Savanna Elephants</h3>
+            <p class="status endangered">Endangered</p>
+            <p>African Savanna Elephants are endangered because of ivory poaching and habitat loss.</p>
+        </div>
+        <a href="https://www.savetheelephants.org" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+
+    <div class="card" data-status="Extinct in the Wild">
+        <div class="cardContainer">
+            <img src="img/crow.jpg" alt="Hawaiian Crow">
+            <h3>Hawaiian Crow</h3>
+            <p class="status extinctWild">Extinct in the Wild</p>
+            <p>Hawaiian Crows became extinct in the wild due to habitat loss, diseases, predators, and other environmental pressures. </p>
+        </div>
+        <a href="https://www.worldwildlife.org/donate" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+
+    <div class="card" data-status="Extinct in the Wild">
+        <div class="cardContainer">
+            <img src="img/dove.jpg" alt="Socorro Dove">
+            <h3>Socorro Dove</h3>
+            <p class="status extinctWild">Extinct in the Wild</p>
+            <p>The Socorro Dove became extinct in the wild due to their habitat destruction and human activities. One example of an activity that severely affected the doves are the establishment of a military bases. Also, feral cats are a very dangerous predator to the Socorro Doves causing a large decline in the population of Socorro Doves. </p>
+        </div>
+        <a href="https://www.iucnredlist.org" target="_blank">
+            <button class="donate-btn">Donate to Protect</button>
+        </a>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
