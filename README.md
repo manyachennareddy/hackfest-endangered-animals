@@ -4,5 +4,5 @@
 Check out our hackathon-winning project on Devpost:  
 🔗 https://devpost.com/software/save-our-species
 
-## 📄 Presentation 
+📄 Presentation 
 [View Project Presentation PDF](presentation/SaveOurSpecies.pdf)
